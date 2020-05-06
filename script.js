@@ -5,9 +5,12 @@ addEventListener('load', () => {
 
 function showDay() {
     let day = getDay();
+    let dayElement = document.getElementById('day');
 
-    document.getElementById('day').innerText = day
-    document.title = day;
+    if (day !== dayElement.innerText) {
+        dayElement.innerText = day
+        document.title = day;
+    }
 }
 
 function getDay() {
